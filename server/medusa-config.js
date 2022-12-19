@@ -64,6 +64,9 @@ module.exports = {
     // database_type: "sqlite",
     store_cors: STORE_CORS,
     admin_cors: ADMIN_CORS,
+    database_logging: true,
+    database_extra: {},
+    JWT_SECRET: process.env.JWT_SECRET
   },
   plugins,
 };
