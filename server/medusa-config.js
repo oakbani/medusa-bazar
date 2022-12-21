@@ -68,5 +68,8 @@ module.exports = {
     database_extra: {},
     JWT_SECRET: process.env.JWT_SECRET
   },
+  cli_migration_dirs: [
+    'dist/**/*.migration.js' 
+  ],
   plugins,
 };

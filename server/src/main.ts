@@ -2,12 +2,13 @@ import { Medusa } from 'medusa-extender';
 import express = require('express');
 
 import { StoreModule } from './modules/store/store.module';
+import { UserModule } from './modules/user/user.module';
 
 async function bootstrap() {
     const expressInstance = express();
 
     await new Medusa(__dirname + '/../', expressInstance).load([
-        StoreModule
+        StoreModule, UserModule
     ]);
 
     expressInstance.listen(9000, () => {
