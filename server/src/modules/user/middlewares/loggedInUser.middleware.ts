@@ -6,6 +6,10 @@ import UserService from '../../user/services/user.service';
 @Middleware({ requireAuth: true, routes: [{ method: "all", path: '*' }] })
 export class LoggedInUserMiddleware implements MedusaMiddleware {
     public async consume(req: MedusaAuthenticatedRequest, res: Response, next: NextFunction): Promise<void> {
+        console.log("Priting out req.user below")
+        console.log(JSON.stringify(req.user))
+        console.log(req.userId)
+        console.log(JSON.stringify(req.session.jwt))
         if (req.user && req.user.userId) {
             const userService = req.scope.resolve('userService') as UserService;
             const loggedInUser = await userService.retrieve(req.user.userId, {

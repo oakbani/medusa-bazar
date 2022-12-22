@@ -7,8 +7,7 @@ import { User } from '../entities/user.entity';
 import UserRepository from '../repositories/user.repository';
 import { MedusaError } from 'medusa-core-utils';
 
-// import { validateId } from '@medusajs/medusa/dist/utils/validate-id'
-// import { buildQuery } from '@medusajs/medusa/dist/utils/build-query'
+
 import { AnalyticsConfigService } from '@medusajs/medusa/dist/services';
 import { validateId, buildQuery }from  '@medusajs/medusa/dist/utils'
 import { FlagRouter }from  '@medusajs/medusa/dist/utils/flag-router'
